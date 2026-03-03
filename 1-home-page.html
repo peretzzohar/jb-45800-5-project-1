@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="appMAIN.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <div id="menu"></div>
+
+
+    <h1> Expense </h1>
+    <form id="expenseList" onsubmit="addToList(event)">
+
+        <select id="expenseType" required>
+            <option disabled selected value="">Please select a category</option>
+            <option value="insurance">insurance</option>
+            <option value="medical">medical</option>
+            <option value="subscriptions">subscriptions</option>
+            <option value="shopping">shopping</option>
+            <option value="groceries">groceries</option>
+            <option value="savings">savings</option>
+            <option value="diningOut">dining out</option>
+            <option value="gifts">gifts</option>
+            <option value="travel">travel</option>
+            <option value="other">other</option>
+        </select>
+
+
+        <input id="expenseDescription" placeholder="please provide the expense's description" required type="text">
+
+        <input id="otherDescription" placeholder="describe other" type="text" />
+
+        <input id="expenseAmount" placeholder="please provide the expense's total amount in $" required type="number"
+            min="0" max="100000">
+
+        <input id="expenseDate" placeholder="Please provide the expense date" required type="date">
+
+        <input type="hidden" id="currentRowId">
+
+        <button>submit</button>
+
+    </form>
+    <div class="tableAll">
+        <table>
+            <thead>
+                <tr>
+                    <th> Expense Type </th>
+                    <th> Other Description</th>
+                    <th> Expense Description </th>
+                    <th> Expense Amount</th>
+                    <th> Expense Date</th>
+                    <th class="buttons"></th>
+                </tr>
+            </thead>
+
+            <tbody id="formData">
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

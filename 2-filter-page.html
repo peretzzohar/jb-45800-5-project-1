@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="appMAIN.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>filters</title>
+</head>
+
+<body>
+    <div id="menu"></div>
+    
+    <h1> Filters </h1>    
+
+<form id="filterForm" onsubmit="filter(event)">
+
+<p>Choose filter type:</p>
+</br>
+
+<div class="radio-group">
+    <label><input type="radio" name="filterType" value="year" checked> Year</label>
+    <label><input type="radio" name="filterType" value="month"> Month</label>
+    <label><input type="radio" name="filterType" value="day"> Day</label>
+    <label><input type="radio" name="filterType" value="amount"> Amount</label>
+</div>
+
+
+</br>
+
+    <div id="yearDiv">
+        <label>Year:</label>
+        <input type="number" id="yearInput" min="1900" max="2026" placeholder="YYYY">
+    </div>
+
+    <div id="monthDiv" style="display:none">
+        <label for="monthInput">Choose Month:</label>
+        <input type="month" id="monthInput">
+    </div>
+
+    <div id="dayDiv" style="display:none">
+        <label for="dayInput">Choose Day:</label>
+        <input type="date" id="dayInput">
+    </div>
+
+    <div id="amountDiv" style="display:none">
+        <label>Amount:</label>
+        <input type="number" id="amountInput"  placeholder="maximum amount" min="0" max="100000">
+    </div>
+
+</br>
+    <button>submit</button>
+</form>
+</br>
+    <div class="filterTable">
+        <table>
+            <thead>
+                <tr>
+                    <th> Expense Type </th>
+                    <th> Other Description</th>
+                    <th> Expense Description </th>
+                    <th> Expense Amount</th>
+                    <th> Expense Date</th>
+                </tr>
+            </thead>
+
+            <tbody id="formfilterData">
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

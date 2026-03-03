@@ -1,0 +1,363 @@
+/* =========================
+   General Page Styling
+========================= */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e3f2fd;
+    color: #01579b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* =========================
+   Menu Styling
+========================= */
+#menu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #90caf9;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#menu a:hover {
+    background-color: #42a5f5;
+    transform: scale(1.05);
+}
+
+/* =========================
+   Headings
+========================= */
+h1 {
+    color: #0277bd;
+    margin: 20px 0;
+}
+
+/* =========================
+   Form Styling
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+form input,
+form select {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #90caf9;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #42a5f5;
+    box-shadow: 0 0 5px rgba(66,165,245,0.5);
+}
+
+#otherDescription {
+    display: none; /* יופיע רק אם נבחר 'Other' */
+}
+
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap; /* wrap on small screens */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+}
+
+#yearDiv, #monthDiv, #dayDiv, #amountDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+form input[type="number"],
+form input[type="month"],
+form input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #90caf9;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+form input:focus {
+    border-color: #42a5f5;
+    box-shadow: 0 0 5px rgba(66,165,245,0.5);
+}
+
+form button {
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #0288d1;
+    transform: scale(1.03);
+}
+
+
+.tableAll {
+    width: 100%;
+    overflow-x: auto; 
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    min-width: 600px; 
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #90caf9;
+    word-break: break-word; 
+}
+
+th {
+    background-color: #42a5f5;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #e3f2fd;
+}
+
+tr:hover {
+    background-color: #bbdefb;
+}
+
+table button {
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+table button:hover {
+    background-color: #01579b;
+    transform: scale(1.1);
+}
+
+/* =========================
+   Download Buttons
+========================= */
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.download-buttons button {
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.download-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    background-color: #0288d1;
+}
+
+.about-container {
+    display: flex;
+        align-items: center; 
+    justify-content: center;   
+    gap: 30px;                 
+    flex-wrap: wrap;           
+    margin: 50px auto;
+}
+
+.secondparagraph {
+    flex: 1 1 500px;          
+    max-width: 600px;
+}
+
+.programmer-pic {
+    height: 250px;
+    flex-shrink: 0;            
+        border-radius: 25px; 
+border: 1px solid rgb(255, 255, 255) 
+}
+
+
+.paragraph,
+.secondparagraph  {
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.paragraph h2,
+.secondparagraph h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #5a4fcf;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.paragraph h2::after,
+.secondparagraph h2::after  {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #6c5ce7, #a29bfe);
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
+
+
+.paragraph p,
+.secondparagraph p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #2c3e50;
+    text-align: justify;
+    word-break: break-word;
+}
+
+.paragraph p::first-letter,
+.secondparagraph p::first-letter {
+    font-size: 34px;
+    font-weight: bold;
+    color: rgb(116, 109, 183);
+}
+
+.paragraph p br,
+.secondparagraph p br {
+    display: block;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+
+@media (max-width: 768px) {
+    .paragraph,
+    .secondparagraph {
+        padding: 25px;
+    }
+
+    .paragraph h2,
+    .secondparagraph h2 {
+        font-size: 28px;
+    }
+
+    .paragraph p,
+    .secondparagraph p {
+        font-size: 16px;
+    }
+    table th, table td {
+        font-size: 16px;
+    table {
+        min-width: 100%; 
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}}
+
+@media (max-width: 480px) {
+    .paragraph,
+    .secondparagraph {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+
+    .paragraph h2,
+    .secondparagraph h2 {
+        font-size: 24px;
+    }
+
+    .paragraph p,
+    .secondparagraph p {
+        font-size: 15px;
+    }
+    table th, table td {
+        font-size: 16px;
+    table {
+        min-width: 100%;
+    }
+
+    th, td {
+        padding: 8px 6px;
+        font-size: 14px;
+    }
+}}
